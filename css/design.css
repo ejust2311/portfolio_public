@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka:700|Epilogue:400');
+
+/*variables*/
+:root {
+    --main-bg-color: #0c4622;
+    --text-color: #eaf8ea;
+    --primary-color: #a3df9a;
+    --secondary-color: #b0d9cd;
+    --accent-color: #a8dba8;
+    --translucent-color: #a3df9a47;
+    --shadow-color: #a3df9a73;
+    --dark-overlay: #3546329f;
+
+    --corner-radius: 8px;
+}
+
+/* main page design */
+body {
+    color: var(--text-color);
+    background-color: var(--main-bg-color);
+    font-family: 'Epilogue', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Fredoka', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: .5em;
+}
+
+html {font-size: 100%;}
+h1 {font-size: 4.210rem;}
+h2 {font-size: 3.158rem;}
+h3 {font-size: 2.369rem;}
+h4 {font-size: 1.777rem;}
+h5 {font-size: 1.333rem;}
+small {font-size: 0.750rem;}
+
+/*navbar design */
+.topnav {
+    width: 100%;
+	float: left;
+	margin: 0 0 1em 0;
+    background-color: var(--shadow-color);
+    overflow: auto;
+    border-radius: var(--corner-radius);
+}
+.topnav a {
+    float: left;
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px 18px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-bg-color);
+  }
+.topnav a.active {
+    background-color: var(--primary-color);
+    color: var(--main-bg-color);
+}
+
+.topnav a.split {
+    float: right;
+    padding: 6px 10px 2px 10px ;
+}
+
+.topnav img {
+    overflow: auto;
+    height: 35px;
+    filter: invert(96%) sepia(15%) saturate(177%) hue-rotate(61deg) brightness(101%) contrast(94%);
+}
+
+.topnav a:hover img {
+    filter: invert(19%) sepia(76%) saturate(460%) hue-rotate(90deg) brightness(93%) contrast(97%);
+}
+
+.linkedin img {
+    margin-top: 10px;
+}
+
+/* introduction design */
+.introduction {
+    width:99%;
+	float: left;
+    padding: 0 0 0 1em;
+    background-color: var(--translucent-color);
+    background-image: url(../images/greenhousev2.png);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: var(--corner-radius);
+    background-position: center;
+    height: 700px;
+  }
+
+.introduction h4 {
+    font-size: 4em;
+    margin-top: 2.5em;
+}
+.introduction p {
+    font-size: 150%;
+}
+
+/* Area design */
+.wideArea {
+    background-color: var(--translucent-color);
+    width: 99%;
+    border-radius: var(--corner-radius);
+    float: left;
+    padding: 0 0 10px 10px;
+    margin: 0 0 10px 0;
+}
+
+
+.wideArea a:link {
+    color: var(--primary-color);
+}
+
+.wideArea a:visited {
+    color: var(--secondary-color);
+}
+
+.wideArea img.icon {
+    height: 20px;
+    filter: invert(96%) sepia(15%) saturate(177%) hue-rotate(61deg) brightness(101%) contrast(94%);
+    margin: 6px 5px 0px 2px;
+}
+
+.smallArea {
+    width: 99.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+.item {
+    background-color: var(--translucent-color);
+    padding: 0 10px 0 20px;
+    border-radius: var(--corner-radius);
+    overflow: auto;
+    width: 33%;
+}
+
+.item img {
+    border-radius: var(--corner-radius);
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 90%;
+    height: auto;
+}
+
+@media (max-width: 750px) {
+    .smallArea {
+      flex-direction: column;
+      width: 95%;
+    }
+    .item {
+        width: 100%;
+    }
+}
+
+/* Gallery */
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container {
+    position: relative;
+    width: 49%;
+}
+
+@media (max-width: 750px) {
+    .gallery {
+      flex-direction: column;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+.container img {
+    background-color: var(--translucent-color);
+    border-radius: var(--corner-radius);
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-overlay);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    border-radius: var(--corner-radius);
+}
+
+.container:hover .overlay{
+    height: 100%;
+}
+
+.description {
+    white-space: wrap;
+    font-size: 120%;
+    color: var(--text-color);
+    overflow: auto;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 4px 3px 4px black;
+}
