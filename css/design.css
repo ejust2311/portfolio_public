@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka:700|Epilogue:400');
 
 /*variables*/
-:root {
+/*:root {
     --main-bg-color: #0c4622;
     --text-color: #eaf8ea;
     --primary-color: #a3df9a;
@@ -10,6 +10,20 @@
     --translucent-color: #a3df9a47;
     --shadow-color: #a3df9a73;
     --dark-overlay: #3546329f;
+
+    --corner-radius: 8px;
+}*/
+
+/*farben neu*/
+:root {
+    --main-bg-color: #151d13;
+    --text-color: #e1e4c7;
+    --primary-color: #91b655;
+    --secondary-color: #342642;
+    --accent-color: #81c0e9;
+    --translucent-color: #91b65547;
+    --shadow-color: #91b65573;
+    --dark-overlay: #151d139f;
 
     --corner-radius: 8px;
 }
@@ -54,7 +68,7 @@ small {font-size: 0.750rem;}
     text-decoration: none;
 }
 .topnav a:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
     color: var(--main-bg-color);
   }
 .topnav a.active {
@@ -70,11 +84,14 @@ small {font-size: 0.750rem;}
 .topnav img {
     overflow: auto;
     height: 35px;
-    filter: invert(96%) sepia(15%) saturate(177%) hue-rotate(61deg) brightness(101%) contrast(94%);
+    /*filter: invert(96%) sepia(15%) saturate(177%) hue-rotate(61deg) brightness(101%) contrast(94%);*/
+    filter: invert(90%) sepia(5%) saturate(787%) hue-rotate(27deg) brightness(105%) contrast(84%);
 }
 
 .topnav a:hover img {
-    filter: invert(19%) sepia(76%) saturate(460%) hue-rotate(90deg) brightness(93%) contrast(97%);
+    
+    /*filter: invert(19%) sepia(76%) saturate(460%) hue-rotate(90deg) brightness(93%) contrast(97%);*/
+    filter: invert(8%) sepia(9%) saturate(2008%) hue-rotate(62deg) brightness(96%) contrast(93%);
 }
 
 .linkedin img {
@@ -133,7 +150,8 @@ small {font-size: 0.750rem;}
 .smallArea {
     width: 99.5%;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex-direction: row;*/
     justify-content: center;
     gap: 10px;
 }
@@ -142,7 +160,7 @@ small {font-size: 0.750rem;}
     padding: 0 10px 0 20px;
     border-radius: var(--corner-radius);
     overflow: auto;
-    width: 33%;
+    width: 31.3%;
 }
 
 .item img {
